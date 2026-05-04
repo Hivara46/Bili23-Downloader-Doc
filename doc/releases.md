@@ -12,8 +12,10 @@ let windows_zip_url = formatURL('windows_x64_portable.zip')
 
 let windows_7_exe_url = formatURL('windows_x64_for_win7.exe')
 
-let linux_deb_url = formatURL('linux_amd64.deb')
-let linux_tar_gz_url = formatURL('linux_amd64_portable.tar.gz')
+let linux_amd64_deb_url = formatURL('linux_amd64.deb')
+let linux_arm64_deb_url = formatURL('linux_arm64.deb')
+let linux_amd64_tar_gz_url = formatURL('linux_amd64_portable.tar.gz')
+let linux_arm64_tar_gz_url = formatURL('linux_arm64_portable.tar.gz')
 
 let macos_aarch64_url = formatURL('macos_aarch64.dmg')
 let macos_x86_64_url = formatURL('macos_x86_64.dmg')
@@ -53,22 +55,43 @@ Windows 7 用户请**务必**选择下方专用版，否则无法运行。
 
 ## Linux
 ::: warning ⚠️ Linux 用户注意
-glibc 版本须为 2.27 及以上，即 Ubuntu 18.04 / Debian 10 及以上版本。请根据你的发行版选择对应的安装包。
+如果你的系统版本低于要求的版本，请参考 [从源码安装](./manual-installation.md) 并根据文档指引降级依赖以运行本程序。
+
+请根据你的 Linux 发行版和系统架构选择对应的安装包。如果你不确定自己的系统架构，可以在终端输入 `uname -m` 来查看：
+- 输出 `x86_64` 表示你使用的是 amd64 架构
+- 输出 `aarch64` 或 `arm64` 表示你使用的是 arm64 架构
 :::
 
-| 适用环境 | 文件类型 | 说明 | 下载链接 |
+### AMD64 架构
+::: warning ⚠️ 注意
+**最低系统版本要求**：Ubuntu 20.04 / Debian 11 / Fedora 32 / RHEL 9 及以上 (glibc 2.31+)
+:::
+
+| 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| Ubuntu / Debian (amd64) | deb 安装包 | 原生安装程序 | <a :href="linux_deb_url" target="_blank">Github</a> |
-| Linux 通用 (amd64) | tar.gz 便携版 | 解压即用 | <a :href="linux_tar_gz_url" target="_blank">Github</a> |
+| Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_amd64_deb_url" target="_blank">Github</a> |
+| Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_amd64_tar_gz_url" target="_blank">Github</a> |
+
+
+### ARM64 架构
+::: warning ⚠️ 注意
+**最低系统版本要求**：Ubuntu 24.04 / Debian 13 / Fedora 40 / RHEL 10 及以上 (glibc 2.39+)
+:::
+
+| 系统 | 文件类型 | 说明 | 下载链接 |
+| :--- | :--- | :--- | :--- |
+| Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_arm64_deb_url" target="_blank">Github</a> |
+| Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_arm64_tar_gz_url" target="_blank">Github</a> |
+
 
 
 ## macOS
 ::: warning ⚠️ macOS 用户注意
-**最低系统版本要求**：
-- **苹果 M 系列芯片**：macOS 11.0 (Big Sur) 及以上
-- **英特尔 (Intel) 芯片**：macOS 10.15 (Catalina) 及以上
+**最低系统版本要求**：macOS 12.0 (Monterey) 及以上。
+ 
+如果你的系统版本低于要求的版本，请参考 [从源码安装](./manual-installation.md) 并根据文档指引降级依赖以运行本程序。
 
-请根据你的 Mac 电脑处理器类型选择对应的安装包。如果你遇到了安装包损坏或无法验证的问题，请参考 [macOS 用户常见问题](/doc/faq.html#macos-用户常见问题)。
+请根据你的 Mac 电脑处理器类型选择对应的安装包。如果您遇到了安装包损坏或无法验证的问题，请参考 [macOS 用户常见问题](/doc/faq.html#macos-用户常见问题)。
 :::
 
 | 芯片类型 | 文件类型 | 说明 | 下载链接 |

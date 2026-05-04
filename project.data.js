@@ -1,8 +1,8 @@
 export default {
   load() {
     return {
-      version: '2.00.1',
-      date: '2026-04-07'
+      version: '2.00.2',
+      date: '2026-05-04'
     }
   }
 }

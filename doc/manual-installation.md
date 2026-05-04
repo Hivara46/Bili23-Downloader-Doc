@@ -41,16 +41,44 @@ source venv/bin/activate
 ```
 :::
 
-**第三步：安装底层依赖包**
+**第三步：安装依赖包**
+::: tip 💡 Linux 旧版系统兼容性提示
+如果你使用的是较旧的 Linux 发行版，请先将 `requirements.txt` 中 PySide6 的版本上限调整为以下值：
+
+- **amd64 架构**：  
+  如果你的 glibc 版本范围为 2.28 ~ 2.33，建议最高使用 6.9.x 版本
+  ```bash
+  PySide6<6.10
+  ```
+  低于 2.28 版本不受支持。
+
+- **arm64 架构**：  
+  如果你的 glibc 版本范围为 2.31 ~ 2.38，建议最高使用 6.7.x 版本
+  ```bash
+  PySide6<6.8
+  ```
+
+  低于 2.31 版本不受支持。
+:::
+
+::: tip 💡 macOS 旧版系统兼容性提示
+如果你使用的是 macOS 10.15 或 11，请先将 `requirements.txt` 中 PySide6 的版本上限调整为以下值：
+
+- **macOS 11**：  
+  建议最高使用 6.7.x 版本
+  ```bash
+  PySide6<6.8
+  ```
+- **macOS 10.15**：  
+  建议最高使用 6.4.x 版本
+  ```bash
+  PySide6<6.5
+  ```
+:::
+
 ```bash
 pip install -r requirements.txt
 ```
-
-::: warning 🛑 Windows 界面兼容性提示
-针对 Windows 系统下的 GUI 渲染：请勿主动将 **PySide6** 升级至 `6.11.0` 及更高版本。
-强烈推荐维持在 **`6.10.2`** 版本（`requirements.txt` 中默认已限制），否则可能引发程序界面显示异常或撕裂。
-:::
-
 
 ## 4. 启动程序
 完成上述所有环境配置后，进入主程序 `src` 目录，并启动入口脚本：
@@ -61,11 +89,6 @@ python main.py
 
 
 ## 附录：关于底层构建
-
-::: danger 🚫 编译避坑警告：禁止使用 Nuitka
-请**绝对不要**尝试使用 [Nuitka](https://nuitka.net/) 来编译打包本项目！
-由于本项目重度依赖 `PySide6`（其底层封装了大量 C++ Qt 库），而 Nuitka 在打包时会将 Python 代码转译为 C 代码。两者在底层内存管理上的冲突会导致编译出的程序在运行时直接崩溃，并抛出不可修复的 `Segmentation fault` (段错误)。若需打包，请务必使用 PyInstaller。
-:::
 
 如果你好奇本项目是如何在跨平台上实现自动化构建与封装打包的，欢迎参考以下开源仓库与流水线脚本：
 

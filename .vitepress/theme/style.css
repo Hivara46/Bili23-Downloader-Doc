@@ -137,3 +137,21 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+.feature-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.feature-table th:first-child,
+.feature-table td:first-child {
+  width: 18%;
+  white-space: nowrap;
+}
+
+.feature-table th:nth-child(2),
+.feature-table td:nth-child(2) {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
