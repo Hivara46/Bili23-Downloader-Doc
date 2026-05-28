@@ -5,35 +5,52 @@ function formatURL(type) {
     return `https://github.com/ScottSloan/Bili23-Downloader/releases/download/v${data.version}/Bili23-Downloader_${data.version}_${type}`
 }
 
+function formatOneDriveURL(type, key) {
+    return `https://drive.scott-sloan.cn/f/${key}/Bili23-Downloader_${data.version}_${type}`
+}
+
 let release_url = `https://github.com/ScottSloan/Bili23-Downloader/releases/tag/v${data.version}`
 
 // Windows
-let windows_exe_url = formatURL('windows_x64.exe')
-let windows_exe_url_onedrive = `https://drive.scott-sloan.cn/f/jkKsj/Bili23-Downloader_2.00.6_windows_x64.exe`
-let windows_zip_url = formatURL('windows_x64_portable.zip')
-let windows_zip_url_onedrive = `https://drive.scott-sloan.cn/f/k1lIL/Bili23-Downloader_2.00.6_windows_x64_portable.zip`
+let windows_exe_type = 'windows_x64.exe'
+let windows_exe_url = formatURL(windows_exe_type)
+let windows_exe_url_onedrive = formatOneDriveURL(windows_exe_type, data.onedrive.windows_exe_key)
+
+let windows_zip_type = 'windows_x64_portable.zip'
+let windows_zip_url = formatURL(windows_zip_type)
+let windows_zip_url_onedrive = formatOneDriveURL(windows_zip_type, data.onedrive.windows_zip_key)
 
 // Windows 7
-let windows_7_exe_url = formatURL('windows_x64_for_win7.exe')
-let windows_7_exe_url_onedrive = `https://drive.scott-sloan.cn/f/dW5h0/Bili23-Downloader_2.00.6_windows_x64_for_win7.exe`
+let windows_7_exe_type = 'windows_x64_for_win7.exe'
+let windows_7_exe_url = formatURL(windows_7_exe_type)
+let windows_7_exe_url_onedrive = formatOneDriveURL(windows_7_exe_type, data.onedrive.windows_7_exe_key)
 
 // Linux AMD64
-let linux_amd64_deb_url = formatURL('linux_amd64.deb')
-let linux_amd64_deb_url_onedrive = `https://drive.scott-sloan.cn/f/xMxTz/Bili23-Downloader_2.00.6_linux_amd64.deb`
-let linux_amd64_tar_gz_url = formatURL('linux_amd64_portable.tar.gz')
-let linux_amd64_tar_gz_url_onedrive = `https://drive.scott-sloan.cn/f/zZbId/Bili23-Downloader_2.00.6_linux_amd64_portable.tar.gz`
+let linux_amd64_deb_type = 'linux_amd64.deb'
+let linux_amd64_deb_url = formatURL(linux_amd64_deb_type)
+let linux_amd64_deb_url_onedrive = formatOneDriveURL(linux_amd64_deb_type, data.onedrive.linux_amd64_deb_key)
+
+let linux_amd64_tar_gz_type = 'linux_amd64_portable.tar.gz'
+let linux_amd64_tar_gz_url = formatURL(linux_amd64_tar_gz_type)
+let linux_amd64_tar_gz_url_onedrive = formatOneDriveURL(linux_amd64_tar_gz_type, data.onedrive.linux_amd64_tar_gz_key)
 
 // Linux ARM64
-let linux_arm64_deb_url = formatURL('linux_arm64.deb')
-let linux_arm64_deb_url_onedrive = `https://drive.scott-sloan.cn/f/G2zFB/Bili23-Downloader_2.00.6_linux_arm64.deb`
-let linux_arm64_tar_gz_url = formatURL('linux_arm64_portable.tar.gz')
-let linux_arm64_tar_gz_url_onedrive = `https://drive.scott-sloan.cn/f/26Eix/Bili23-Downloader_2.00.6_linux_arm64_portable.tar.gz`
+let linux_arm64_deb_type = 'linux_arm64.deb'
+let linux_arm64_deb_url = formatURL(linux_arm64_deb_type)
+let linux_arm64_deb_url_onedrive = formatOneDriveURL(linux_arm64_deb_type, data.onedrive.linux_arm64_deb_key)
+
+let linux_arm64_tar_gz_type = 'linux_arm64_portable.tar.gz'
+let linux_arm64_tar_gz_url = formatURL(linux_arm64_tar_gz_type)
+let linux_arm64_tar_gz_url_onedrive = formatOneDriveURL(linux_arm64_tar_gz_type, data.onedrive.linux_arm64_tar_gz_key)
 
 // macOS
-let macos_aarch64_url = formatURL('macos_aarch64.dmg')
-let macos_aarch64_url_onedrive = `https://drive.scott-sloan.cn/f/Pm4C8/Bili23-Downloader_2.00.6_macos_aarch64.dmg`
-let macos_x86_64_url = formatURL('macos_x86_64.dmg')
-let macos_x86_64_url_onedrive = `https://drive.scott-sloan.cn/f/aOWHW/Bili23-Downloader_2.00.6_macos_x86_64.dmg`
+let macos_aarch64_type = 'macos_aarch64.dmg'
+let macos_aarch64_url = formatURL(macos_aarch64_type)
+let macos_aarch64_url_onedrive = formatOneDriveURL(macos_aarch64_type, data.onedrive.macos_aarch64_key)
+
+let macos_x86_64_type = 'macos_x86_64.dmg'
+let macos_x86_64_url = formatURL(macos_x86_64_type)
+let macos_x86_64_url_onedrive = formatOneDriveURL(macos_x86_64_type, data.onedrive.macos_x86_64_key)
 
 </script>
 
