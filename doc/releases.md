@@ -7,18 +7,33 @@ function formatURL(type) {
 
 let release_url = `https://github.com/ScottSloan/Bili23-Downloader/releases/tag/v${data.version}`
 
+// Windows
 let windows_exe_url = formatURL('windows_x64.exe')
+let windows_exe_url_onedrive = `https://drive.scott-sloan.cn/f/jkKsj/Bili23-Downloader_2.00.6_windows_x64.exe`
 let windows_zip_url = formatURL('windows_x64_portable.zip')
+let windows_zip_url_onedrive = `https://drive.scott-sloan.cn/f/k1lIL/Bili23-Downloader_2.00.6_windows_x64_portable.zip`
 
+// Windows 7
 let windows_7_exe_url = formatURL('windows_x64_for_win7.exe')
+let windows_7_exe_url_onedrive = `https://drive.scott-sloan.cn/f/dW5h0/Bili23-Downloader_2.00.6_windows_x64_for_win7.exe`
 
+// Linux AMD64
 let linux_amd64_deb_url = formatURL('linux_amd64.deb')
-let linux_arm64_deb_url = formatURL('linux_arm64.deb')
+let linux_amd64_deb_url_onedrive = `https://drive.scott-sloan.cn/f/xMxTz/Bili23-Downloader_2.00.6_linux_amd64.deb`
 let linux_amd64_tar_gz_url = formatURL('linux_amd64_portable.tar.gz')
-let linux_arm64_tar_gz_url = formatURL('linux_arm64_portable.tar.gz')
+let linux_amd64_tar_gz_url_onedrive = `https://drive.scott-sloan.cn/f/zZbId/Bili23-Downloader_2.00.6_linux_amd64_portable.tar.gz`
 
+// Linux ARM64
+let linux_arm64_deb_url = formatURL('linux_arm64.deb')
+let linux_arm64_deb_url_onedrive = `https://drive.scott-sloan.cn/f/G2zFB/Bili23-Downloader_2.00.6_linux_arm64.deb`
+let linux_arm64_tar_gz_url = formatURL('linux_arm64_portable.tar.gz')
+let linux_arm64_tar_gz_url_onedrive = `https://drive.scott-sloan.cn/f/26Eix/Bili23-Downloader_2.00.6_linux_arm64_portable.tar.gz`
+
+// macOS
 let macos_aarch64_url = formatURL('macos_aarch64.dmg')
+let macos_aarch64_url_onedrive = `https://drive.scott-sloan.cn/f/Pm4C8/Bili23-Downloader_2.00.6_macos_aarch64.dmg`
 let macos_x86_64_url = formatURL('macos_x86_64.dmg')
+let macos_x86_64_url_onedrive = `https://drive.scott-sloan.cn/f/aOWHW/Bili23-Downloader_2.00.6_macos_x86_64.dmg`
 
 </script>
 
@@ -41,8 +56,8 @@ let macos_x86_64_url = formatURL('macos_x86_64.dmg')
 
 | 系统 / 架构 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| Windows 10/11 (x64) | exe 安装包 | 标准安装程序（推荐） | <a :href="windows_exe_url" target="_blank">Github</a> |
-| Windows 10/11 (x64) | zip 便携版 | 免安装，解压即用 | <a :href="windows_zip_url" target="_blank">Github</a> |
+| Windows 10/11 (x64) | exe 安装包 | 标准安装程序（推荐） | <a :href="windows_exe_url" target="_blank">Github</a> <br> <a :href="windows_exe_url_onedrive" target="_blank">OneDrive(加速)</a> |
+| Windows 10/11 (x64) | zip 便携版 | 免安装，解压即用 | <a :href="windows_zip_url" target="_blank">Github</a> <br> <a :href="windows_zip_url_onedrive" target="_blank">OneDrive(加速)</a> |
 
 ::: warning ⚠️ Windows 7 用户注意
 Windows 7 用户请**务必**选择下方专用版，否则无法运行。
@@ -50,7 +65,7 @@ Windows 7 用户请**务必**选择下方专用版，否则无法运行。
 
 | 系统 / 架构 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| Windows 7 (x64) | exe 安装包 | Win7 专用安装程序 | <a :href="windows_7_exe_url" target="_blank">Github</a> |
+| Windows 7 (x64) | exe 安装包 | Win7 专用安装程序 | <a :href="windows_7_exe_url" target="_blank">Github</a> <br> <a :href="windows_7_exe_url_onedrive" target="_blank">OneDrive(加速)</a> |
 
 
 ## Linux
@@ -69,8 +84,8 @@ Windows 7 用户请**务必**选择下方专用版，否则无法运行。
 
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_amd64_deb_url" target="_blank">Github</a> |
-| Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_amd64_tar_gz_url" target="_blank">Github</a> |
+| Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_amd64_deb_url" target="_blank">Github</a> <br> <a :href="linux_amd64_deb_url_onedrive" target="_blank">OneDrive(加速)</a> |
+| Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_amd64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_amd64_tar_gz_url_onedrive" target="_blank">OneDrive(加速)</a> |
 
 
 ### ARM64 架构
@@ -80,8 +95,8 @@ Windows 7 用户请**务必**选择下方专用版，否则无法运行。
 
 | 系统 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_arm64_deb_url" target="_blank">Github</a> |
-| Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_arm64_tar_gz_url" target="_blank">Github</a> |
+| Ubuntu / Debian | deb 安装包 | 原生安装程序 | <a :href="linux_arm64_deb_url" target="_blank">Github</a> <br> <a :href="linux_arm64_deb_url_onedrive" target="_blank">OneDrive(加速)</a> |
+| Linux 通用 | tar.gz 便携版 | 解压即用 | <a :href="linux_arm64_tar_gz_url" target="_blank">Github</a> <br> <a :href="linux_arm64_tar_gz_url_onedrive" target="_blank">OneDrive(加速)</a> |
 
 
 
@@ -96,6 +111,6 @@ Windows 7 用户请**务必**选择下方专用版，否则无法运行。
 
 | 芯片类型 | 文件类型 | 说明 | 下载链接 |
 | :--- | :--- | :--- | :--- |
-| 苹果 M 系列芯片 (aarch64) | dmg 安装包 | 适用于 M1/M2/M3/M4 等新型号 | <a :href="macos_aarch64_url" target="_blank">Github</a> |
-| 英特尔芯片 (x86_64) | dmg 安装包 | 适用于旧款 Intel 芯片型号 | <a :href="macos_x86_64_url" target="_blank">Github</a> |
+| 苹果 M 系列芯片 (aarch64) | dmg 安装包 | 适用于 M1/M2/M3/M4 等新型号 | <a :href="macos_aarch64_url" target="_blank">Github</a> <br> <a :href="macos_aarch64_url_onedrive" target="_blank">OneDrive(加速)</a> |
+| 英特尔芯片 (x86_64) | dmg 安装包 | 适用于旧款 Intel 芯片型号 | <a :href="macos_x86_64_url" target="_blank">Github</a> <br> <a :href="macos_x86_64_url_onedrive" target="_blank">OneDrive(加速)</a> |
 
