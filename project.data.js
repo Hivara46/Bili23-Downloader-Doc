@@ -1,18 +1,18 @@
 export default {
   load() {
     return {
-      version: '2.00.7',
-      date: '2026-06-01',
+      version: '2.10.0',
+      date: '2026-06-22',
       lanzou: {
-        windows_exe_key: 'i22zS3qultqb',
-        windows_zip_key: 'iMAmr3quma1i',
-        windows_7_exe_key: 'izDZB3qulmwf',
-        linux_amd64_deb_key: 'ibsYW3quly0f',
-        linux_amd64_tar_gz_key: 'ihY6m3qum1jc',
-        linux_arm64_deb_key: 'i5eEL3qum3oj',
-        linux_arm64_tar_gz_key: 'io2Oq3qum75e',
-        macos_aarch64_key: 'iWW3a3qulqda',
-        macos_x86_64_key: 'iIJw13quls0j'
+        windows_exe_key: 'iP8a83slpmpa',
+        windows_zip_key: 'irk103slq08h',
+        windows_7_exe_key: 'iaUGm3slpsof',
+        linux_amd64_deb_key: 'iWg6D3slocgf',
+        linux_amd64_tar_gz_key: 'izQCx3slokqd',
+        linux_arm64_deb_key: 'iJxqQ3slormb',
+        linux_arm64_tar_gz_key: 'iwxw33sloyub',
+        macos_aarch64_key: 'iRnUH3slp82d',
+        macos_x86_64_key: 'iqIvl3slphfa'
       }
     }
   }
